@@ -1,0 +1,1089 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rosana - 50 Años | Celebración Especial</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Quicksand:wght@300;400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+    <style>
+        /* NUEVA PALETA DE COLORES - Elegancia en dorado y burdeos */
+        :root {
+            --dorado-suave: #d4af7a;
+            --dorado-intenso: #c5a059;
+            --burdeos: #6b2e3e;
+            --burdeos-claro: #8b4b5a;
+            --crema: #faf3e0;
+            --beige: #e8dcca;
+            --gris-elegante: #2c2c2c;
+            --blanco: #ffffff;
+            --sombra: 0 8px 25px rgba(0,0,0,0.15);
+            --sombra-suave: 0 4px 12px rgba(0,0,0,0.08);
+            --transicion: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background: linear-gradient(135deg, var(--burdeos) 0%, var(--gris-elegante) 100%);
+            color: var(--crema);
+            overflow-x: hidden;
+            line-height: 1.7;
+            position: relative;
+        }
+        
+        /* Fondo con patrones sutiles */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: radial-gradient(circle at 20% 30%, rgba(212, 175, 122, 0.08) 2px, transparent 2px);
+            background-size: 40px 40px;
+            pointer-events: none;
+            z-index: 0;
+        }
+        
+        .oculto {
+            display: none !important;
+        }
+        
+        .seccion {
+            min-height: 100vh;
+            padding: 80px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .contenedor {
+            max-width: 1200px;
+            width: 100%;
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+        
+        h1, h2, h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            letter-spacing: 1px;
+        }
+        
+        h1 {
+            font-size: 5rem;
+            background: linear-gradient(135deg, var(--dorado-suave), var(--dorado-intenso));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: none;
+        }
+        
+        h2 {
+            font-size: 2.8rem;
+            position: relative;
+            display: inline-block;
+            margin-bottom: 3rem;
+            color: var(--dorado-suave);
+        }
+        
+        h2::before,
+        h2::after {
+            content: '✦';
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.8rem;
+            color: var(--dorado-suave);
+            opacity: 0.7;
+        }
+        
+        h2::before {
+            left: -40px;
+        }
+        
+        h2::after {
+            right: -40px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 14px 35px;
+            background: linear-gradient(135deg, var(--dorado-suave), var(--dorado-intenso));
+            color: var(--gris-elegante);
+            border: none;
+            border-radius: 40px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: var(--transicion);
+            text-decoration: none;
+            font-family: 'Quicksand', sans-serif;
+            font-weight: 600;
+            box-shadow: var(--sombra);
+            letter-spacing: 1px;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+            background: linear-gradient(135deg, var(--dorado-intenso), var(--dorado-suave));
+        }
+        
+        /* Portada */
+        .portada {
+            background: linear-gradient(135deg, rgba(107, 46, 62, 0.92), rgba(44, 44, 44, 0.95)), url('https://i.postimg.cc/LsNFM0Y2/Roxana-Mis-50-Anos.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        
+        .portada-contenido {
+            animation: fadeInUp 1.2s ease;
+        }
+        
+        .nombre-principal {
+            font-family: 'Great Vibes', cursive;
+            font-size: 7rem;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, var(--dorado-suave), #f3e5ab);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-weight: normal;
+        }
+        
+        .portada .subtitulo {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-family: 'Great Vibes', cursive;
+            color: var(--crema);
+            letter-spacing: 2px;
+        }
+        
+        .fecha-portada {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            font-family: 'Quicksand', sans-serif;
+            color: var(--crema);
+            opacity: 0.9;
+        }
+        
+        /* Corona renovada */
+        .corona-imagen {
+            width: 140px;
+            height: 140px;
+            margin: 0 auto 1rem;
+            animation: brillo-dorado 3s ease-in-out infinite alternate;
+        }
+        
+        .corona-imagen img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            filter: drop-shadow(0 0 10px rgba(212, 175, 122, 0.5));
+        }
+        
+        @keyframes brillo-dorado {
+            from { filter: drop-shadow(0 0 5px rgba(212, 175, 122, 0.3)); transform: scale(1); }
+            to { filter: drop-shadow(0 0 20px rgba(212, 175, 122, 0.8)); transform: scale(1.03); }
+        }
+        
+        /* Invitación con tarjeta elegante */
+        .invitacion {
+            background: linear-gradient(135deg, var(--burdeos), var(--gris-elegante));
+            position: relative;
+        }
+        
+        .invitacion .contenedor {
+            background: rgba(44, 44, 44, 0.5);
+            backdrop-filter: blur(10px);
+            border-radius: 60px 60px 60px 20px;
+            padding: 60px 40px;
+            box-shadow: var(--sombra);
+            border: 1px solid rgba(212, 175, 122, 0.3);
+        }
+        
+        .texto-invitacion {
+            max-width: 800px;
+            margin: 0 auto 50px;
+        }
+        
+        .seccion-texto {
+            margin-bottom: 25px;
+            font-style: italic;
+            line-height: 1.9;
+            color: var(--crema);
+            font-weight: 400;
+            font-size: 1.15rem;
+            font-family: 'Cormorant Garamond', serif;
+        }
+        
+        /* Countdown elegante */
+        .texto-faltan {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: var(--dorado-suave);
+            font-weight: 600;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+        
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 30px 0 40px;
+            flex-wrap: wrap;
+        }
+        
+        .tiempo {
+            background: rgba(212, 175, 122, 0.15);
+            backdrop-filter: blur(5px);
+            color: var(--crema);
+            padding: 18px 15px;
+            border-radius: 20px;
+            min-width: 100px;
+            box-shadow: var(--sombra-suave);
+            border: 1px solid rgba(212, 175, 122, 0.4);
+            transition: var(--transicion);
+        }
+        
+        .tiempo:hover {
+            transform: translateY(-5px);
+            border-color: var(--dorado-suave);
+        }
+        
+        .tiempo span {
+            font-size: 2.2rem;
+            font-weight: bold;
+            display: block;
+            font-family: 'Cormorant Garamond', serif;
+            color: var(--dorado-suave);
+        }
+        
+        .tiempo small {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        /* Formato de fecha y hora */
+        .formato-fecha-hora {
+            background: rgba(212, 175, 122, 0.1);
+            backdrop-filter: blur(5px);
+            padding: 35px;
+            border-radius: 50px;
+            margin: 30px auto;
+            max-width: 450px;
+            border: 1px solid rgba(212, 175, 122, 0.3);
+        }
+        
+        .mes-ano {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        
+        .mes {
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: var(--dorado-suave);
+        }
+        
+        .dia {
+            font-size: 5rem;
+            font-weight: bold;
+            margin: 10px 0;
+            font-family: 'Cormorant Garamond', serif;
+            background: linear-gradient(135deg, var(--dorado-suave), var(--crema));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .ano {
+            font-size: 1.3rem;
+            font-weight: 300;
+        }
+        
+        .hora {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: bold;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 2px solid rgba(212, 175, 122, 0.5);
+            color: var(--dorado-suave);
+        }
+        
+        /* Info evento */
+        .info-evento {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            margin: 50px 0;
+        }
+        
+        .item-info {
+            padding: 30px 20px;
+            background: rgba(212, 175, 122, 0.08);
+            backdrop-filter: blur(5px);
+            border-radius: 30px;
+            transition: var(--transicion);
+            border: 1px solid rgba(212, 175, 122, 0.2);
+        }
+        
+        .item-info:hover {
+            transform: translateY(-8px);
+            background: rgba(212, 175, 122, 0.15);
+            border-color: var(--dorado-suave);
+        }
+        
+        .icono {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            color: var(--dorado-suave);
+            transition: var(--transicion);
+        }
+        
+        .item-info:hover .icono {
+            transform: scale(1.1);
+        }
+        
+        .info-ubicacion p {
+            margin-bottom: 12px;
+        }
+        
+        .ubicacion-link {
+            color: var(--crema);
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transicion);
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 20px;
+            background: rgba(212, 175, 122, 0.2);
+            border-radius: 30px;
+            border: 1px solid rgba(212, 175, 122, 0.5);
+            font-size: 0.9rem;
+        }
+        
+        .ubicacion-link:hover {
+            color: var(--dorado-suave);
+            background: rgba(212, 175, 122, 0.3);
+            transform: translateY(-2px);
+        }
+        
+        /* Dress code */
+        .dress-code-icon {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 15px;
+        }
+        
+        .dress-code-imagen {
+            width: 100px;
+            height: auto;
+            filter: brightness(1.1);
+        }
+        
+        .dress-code-texto {
+            font-size: 1rem;
+            color: var(--crema);
+            margin-top: 10px;
+            font-weight: 500;
+        }
+        
+        /* Sección Regalos */
+        .seccion-regalos {
+            background: linear-gradient(135deg, var(--burdeos), var(--gris-elegante));
+        }
+        
+        .seccion-regalos .contenedor {
+            background: rgba(44, 44, 44, 0.5);
+            backdrop-filter: blur(10px);
+            border-radius: 60px;
+            padding: 60px 40px;
+        }
+        
+        .icono-regalo {
+            font-size: 5rem;
+            color: var(--dorado-suave);
+            margin: 20px 0;
+            animation: latido 2s ease-in-out infinite;
+        }
+        
+        @keyframes latido {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+        
+        .texto-regalo {
+            margin: 25px 0;
+            line-height: 1.8;
+            font-style: italic;
+            font-size: 1.15rem;
+        }
+        
+        .alias-container {
+            background: rgba(212, 175, 122, 0.15);
+            padding: 20px;
+            border-radius: 20px;
+            margin: 30px auto;
+            max-width: 400px;
+            border: 1px solid rgba(212, 175, 122, 0.5);
+        }
+        
+        .alias {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: var(--dorado-suave);
+            margin: 10px 0;
+            letter-spacing: 1px;
+        }
+        
+        .btn-copiar {
+            background: linear-gradient(135deg, var(--dorado-suave), var(--dorado-intenso));
+            color: var(--gris-elegante);
+            border: none;
+            padding: 10px 25px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-family: 'Quicksand', sans-serif;
+            font-weight: 600;
+            transition: var(--transicion);
+            margin: 10px 0;
+        }
+        
+        .btn-copiar:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--sombra-suave);
+        }
+        
+        .mensaje-gracias {
+            font-size: 1.6rem;
+            color: var(--dorado-suave);
+            margin-top: 30px;
+            font-family: 'Great Vibes', cursive;
+        }
+        
+        /* Confirmación */
+        .confirmacion {
+            background: linear-gradient(135deg, var(--burdeos), var(--gris-elegante));
+        }
+        
+        .confirmacion .contenedor {
+            background: rgba(44, 44, 44, 0.5);
+            backdrop-filter: blur(10px);
+            border-radius: 60px;
+            padding: 60px 40px;
+        }
+        
+        /* Navegación */
+        .navegacion {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 50px;
+            flex-wrap: wrap;
+        }
+        
+        /* Modal */
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(44, 44, 44, 0.98);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transicion);
+        }
+        
+        .modal.mostrar {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .modal-contenido {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 20px;
+            box-shadow: var(--sombra);
+            border: 3px solid var(--dorado-suave);
+        }
+        
+        .cerrar {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: var(--blanco);
+            font-size: 40px;
+            cursor: pointer;
+            transition: var(--transicion);
+            background: var(--dorado-suave);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .cerrar:hover {
+            transform: rotate(90deg);
+            background: var(--dorado-intenso);
+        }
+        
+        /* Botón música renovado */
+        .btn-musica {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: linear-gradient(135deg, var(--dorado-suave), var(--dorado-intenso));
+            color: var(--gris-elegante);
+            border: none;
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.6rem;
+            box-shadow: var(--sombra);
+            z-index: 100;
+            transition: var(--transicion);
+            animation: vibracion 3s ease-in-out infinite;
+        }
+        
+        .btn-musica:hover {
+            transform: scale(1.1) rotate(10deg);
+            animation: none;
+        }
+        
+        @keyframes vibracion {
+            0%, 100% { transform: rotate(0deg); }
+            25% { transform: rotate(5deg); }
+            75% { transform: rotate(-5deg); }
+        }
+        
+        /* Texto de instrucción de música */
+        .texto-musica {
+            position: fixed;
+            bottom: 30px;
+            right: 110px;
+            color: var(--crema);
+            font-size: 0.8rem;
+            font-family: 'Quicksand', sans-serif;
+            background: rgba(44, 44, 44, 0.8);
+            backdrop-filter: blur(5px);
+            padding: 8px 15px;
+            border-radius: 20px;
+            z-index: 100;
+            animation: timbre 2s infinite;
+            max-width: 190px;
+            text-align: center;
+            box-shadow: var(--sombra-suave);
+            border: 1px solid rgba(212, 175, 122, 0.3);
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+        
+        @keyframes timbre {
+            0%, 100% { transform: scale(1); opacity: 0.9; }
+            50% { transform: scale(1.03); opacity: 1; }
+        }
+        
+        /* Notificación */
+        .notificacion {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: linear-gradient(135deg, var(--dorado-suave), var(--dorado-intenso));
+            color: var(--gris-elegante);
+            padding: 15px 25px;
+            border-radius: 15px;
+            box-shadow: var(--sombra);
+            z-index: 1000;
+            transform: translateX(150%);
+            transition: transform 0.3s ease;
+            font-weight: 600;
+        }
+        
+        .notificacion.mostrar {
+            transform: translateX(0);
+        }
+        
+        /* Mariposas decorativas */
+        .mariposa {
+            position: absolute;
+            opacity: 0.6;
+            z-index: 1;
+            pointer-events: none;
+            filter: drop-shadow(0 0 3px rgba(212, 175, 122, 0.5));
+        }
+        
+        .mariposa img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        
+        .mariposa-grande { width: 50px; height: 50px; }
+        .mariposa-mediana { width: 40px; height: 40px; }
+        .mariposa-pequena { width: 30px; height: 30px; }
+        
+        @keyframes volar1 {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            25% { transform: translate(10px, -20px) rotate(5deg); }
+            75% { transform: translate(-10px, -10px) rotate(-5deg); }
+        }
+        
+        @keyframes volar2 {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            33% { transform: translate(15px, -15px) rotate(8deg); }
+            66% { transform: translate(-8px, -18px) rotate(-8deg); }
+        }
+        
+        @keyframes volar3 {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            50% { transform: translate(20px, -10px) rotate(10deg); }
+        }
+        
+        /* Animaciones */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animar-entrada {
+            animation: fadeInUp 0.8s ease;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 { font-size: 3rem; }
+            h2 { font-size: 2rem; }
+            h2::before, h2::after { display: none; }
+            
+            .nombre-principal { font-size: 4.5rem; }
+            .portada .subtitulo { font-size: 2rem; }
+            
+            .invitacion .contenedor,
+            .seccion-regalos .contenedor,
+            .confirmacion .contenedor {
+                padding: 40px 25px;
+            }
+            
+            .countdown { gap: 12px; }
+            .tiempo { min-width: 70px; padding: 12px 8px; }
+            .tiempo span { font-size: 1.5rem; }
+            
+            .formato-fecha-hora { padding: 25px; }
+            .dia { font-size: 3.5rem; }
+            .hora { font-size: 1.5rem; }
+            
+            .info-evento { gap: 20px; }
+            
+            .mariposa-grande { width: 35px; height: 35px; }
+            .mariposa-mediana { width: 25px; height: 25px; }
+            .mariposa-pequena { width: 20px; height: 20px; }
+            
+            .texto-musica {
+                right: 100px;
+                font-size: 0.7rem;
+                max-width: 160px;
+                padding: 6px 12px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .nombre-principal { font-size: 3.5rem; }
+            .portada .subtitulo { font-size: 1.5rem; }
+            
+            .tiempo { min-width: 60px; padding: 10px 5px; }
+            .tiempo span { font-size: 1.2rem; }
+            
+            .dia { font-size: 2.5rem; }
+            
+            .navegacion { flex-direction: column; align-items: center; }
+            .btn { width: 100%; max-width: 250px; }
+            
+            .texto-musica {
+                right: 85px;
+                font-size: 0.65rem;
+                max-width: 140px;
+                padding: 5px 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Mariposas decorativas -->
+    <div class="mariposa mariposa-grande" style="top: 15%; left: 5%; animation: volar1 10s infinite ease-in-out;">
+        <img src="https://i.postimg.cc/SxcMbNh1/butterfly01.gif" alt="Mariposa">
+    </div>
+    <div class="mariposa mariposa-mediana" style="top: 30%; right: 8%; animation: volar2 12s infinite ease-in-out 1s;">
+        <img src="https://i.postimg.cc/SxcMbNh1/butterfly01.gif" alt="Mariposa">
+    </div>
+    <div class="mariposa mariposa-pequena" style="top: 70%; left: 12%; animation: volar3 9s infinite ease-in-out 0.5s;">
+        <img src="https://i.postimg.cc/SxcMbNh1/butterfly01.gif" alt="Mariposa">
+    </div>
+    <div class="mariposa mariposa-grande" style="bottom: 15%; right: 10%; animation: volar2 11s infinite ease-in-out 2s;">
+        <img src="https://i.postimg.cc/SxcMbNh1/butterfly01.gif" alt="Mariposa">
+    </div>
+    <div class="mariposa mariposa-mediana" style="top: 50%; left: 3%; animation: volar3 13s infinite ease-in-out 1.5s;">
+        <img src="https://i.postimg.cc/SxcMbNh1/butterfly01.gif" alt="Mariposa">
+    </div>
+    <div class="mariposa mariposa-pequena" style="top: 85%; right: 15%; animation: volar1 8s infinite ease-in-out 0.8s;">
+        <img src="https://i.postimg.cc/SxcMbNh1/butterfly01.gif" alt="Mariposa">
+    </div>
+
+    <!-- Portada -->
+    <section id="portada" class="seccion portada">
+        <div class="contenedor">
+            <div class="portada-contenido">
+                <div class="corona-imagen">
+                    <img src="https://i.postimg.cc/L4jgG83H/corona-png.png" alt="Corona 50 Años">
+                </div>
+                <h1 class="nombre-principal">Rosana</h1>
+                <p class="subtitulo">Mis 50 Años</p>
+                <p class="fecha-portada">¡¡ Medio siglo de puro Brillo !!</p>
+                <button class="btn" onclick="mostrarSeccion('invitacion')">
+                    <i class="fas fa-envelope-open-text"></i> Abrir Invitación
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Invitación Principal -->
+    <section id="invitacion" class="seccion invitacion oculto">
+        <div class="contenedor">
+            <div class="animar-entrada">
+                <div class="corona-imagen">
+                    <img src="https://i.postimg.cc/L4jgG83H/corona-png.png" alt="Corona">
+                </div>
+                <h2>¡Estás invitado!</h2>
+                
+                <div class="texto-invitacion">
+                    <div class="seccion-texto">
+                        ✦ A mis 50 años, cada paso que di se convirtió en una danza llena de historia,
+                        pasión y sueños cumplidos... y lo más hermoso es que mi corazón sigue 
+                        bailando con la misma magia de siempre... ✦
+                    </div>
+                    <div class="seccion-texto">
+                        Por esta razón quiero que compartas conmigo este día tan especial...
+                    </div>
+                </div>
+                
+                <div class="texto-faltan">FALTAN...</div>
+                <div id="countdown" class="countdown">
+                    <div class="tiempo">
+                        <span id="dias">00</span>
+                        <small>Días</small>
+                    </div>
+                    <div class="tiempo">
+                        <span id="horas">00</span>
+                        <small>Horas</small>
+                    </div>
+                    <div class="tiempo">
+                        <span id="minutos">00</span>
+                        <small>Minutos</small>
+                    </div>
+                    <div class="tiempo">
+                        <span id="segundos">00</span>
+                        <small>Segundos</small>
+                    </div>
+                </div>
+                
+                <div class="formato-fecha-hora">
+                    <div class="mes-ano">
+                        <div class="mes">DOMINGO</div>
+                    </div>
+                    <div class="dia">12</div>
+                    <div class="ano">Abril 2026</div>
+                    <div class="hora">12:30 HS</div>
+                </div>
+                
+                <div class="info-evento">
+                    <div class="item-info">
+                        <div class="icono">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h3>Recepción</h3>
+                        <div class="info-ubicacion">
+                            <p>Pasaje Tadeo 19 - Barrio Cooperativa - Manzana 1</p>
+                            <a href="https://maps.app.goo.gl/Ch9Uw86NPT3PyzRt8" target="_blank" class="ubicacion-link">
+                                <i class="fas fa-map-marker-alt"></i> Ver en Google Maps
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="item-info">
+                        <div class="dress-code-icon">
+                            <img src="https://i.postimg.cc/yx015xMb/DRESCODE-copia.png" alt="Sentite comodo" class="dress-code-imagen">
+                        </div>
+                        <h3>Misa de acción de gracias : 08:00 hs</h3>
+                        <div class="dress-code-texto">Almuerzo : 12:30 hs</div>
+                    </div>
+                </div>
+                
+                <div class="navegacion">
+                    <button class="btn" onclick="mostrarSeccion('regalos')">
+                        <i class="fas fa-gift"></i> Regalo
+                    </button>
+                    <button class="btn" onclick="mostrarSeccion('confirmacion')">
+                        <i class="far fa-check-circle"></i> Confirmar Asistencia
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Regalos -->
+    <section id="regalos" class="seccion seccion-regalos oculto">
+        <div class="contenedor">
+            <div class="animar-entrada">
+                <div class="corona-imagen">
+                    <img src="https://i.postimg.cc/L4jgG83H/corona-png.png" alt="Corona">
+                </div>
+                <h2>Regalo</h2>
+                <div class="icono-regalo"><i class="fas fa-heart"></i></div>
+                
+                <div class="texto-regalo">
+                    "Tu presencia es el mejor regalo que puedo recibir.<br>
+                    Pero si deseas hacerme un obsequio,<br>
+                    puede ser físico o por transferencia"
+                </div>
+                
+                <div class="alias-container">
+                    <div class="alias">ALIAS: Rosanatolaba1</div>
+                    <button class="btn-copiar" onclick="copiarAlias()">
+                        <i class="fas fa-copy"></i> Copiar alias
+                    </button>
+                </div>
+                
+                <div class="mensaje-gracias">✨ ¡Gracias por venir! ✨</div>
+                
+                <div class="navegacion">
+                    <button class="btn" onclick="mostrarSeccion('invitacion')">
+                        <i class="fas fa-arrow-left"></i> Volver
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Confirmación -->
+    <section id="confirmacion" class="seccion confirmacion oculto">
+        <div class="contenedor">
+            <div class="animar-entrada">
+                <div class="corona-imagen">
+                    <img src="https://i.postimg.cc/L4jgG83H/corona-png.png" alt="Corona">
+                </div>
+                <h2>Confirma Tu Asistencia</h2>
+                <p>¡Espero que puedas ser parte de esta noche tan especial!</p>
+                
+                <div class="formulario animar-entrada">
+                    <a href="https://wa.me/5493868408111?text=Hola%20Rosana%2C%20quiero%20confirmar%20mi%20asistencia%20a%20tus%2050%20a%C3%B1os" target="_blank" class="btn" style="text-align: center; display: inline-flex; align-items: center; gap: 10px;">
+                        <i class="fab fa-whatsapp"></i> Confirmar por WhatsApp
+                    </a>
+                    <p style="margin-top: 25px; font-size: 0.9rem; opacity: 0.9;">
+                        <i class="fas fa-info-circle"></i> Haz clic en el botón para confirmar tu asistencia
+                    </p>
+                </div>
+                
+                <div class="navegacion">
+                    <button class="btn" onclick="mostrarSeccion('invitacion')">
+                        <i class="fas fa-arrow-left"></i> Volver
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <span class="cerrar" onclick="cerrarModal()">&times;</span>
+        <img class="modal-contenido" id="img-modal">
+    </div>
+
+    <!-- Notificación -->
+    <div id="notificacion" class="notificacion">
+        <i class="fas fa-check-circle"></i> Alias copiado exitosamente
+    </div>
+
+    <!-- Texto de instrucción de música -->
+    <div id="texto-musica" class="texto-musica">
+        🎵 Toca para escuchar o cambiar de tema 🎵
+    </div>
+
+    <!-- Música -->
+    <audio id="musica1" loop>
+        <source src="assets/musica/loba.MP3" type="audio/mpeg">
+    </audio>
+    <audio id="musica2" loop>
+        <source src="assets/musica/corazon.MP3" type="audio/mpeg">
+    </audio>
+    <audio id="musica3" loop>
+        <source src="assets/musica/caballo.MP3" type="audio/mpeg">
+    </audio>
+    <button id="btn-musica" class="btn-musica" onclick="controlarMusica()">
+        <i class="fas fa-music"></i>
+    </button>
+
+    <script>
+        // Control de secciones
+        function mostrarSeccion(seccionId) {
+            document.querySelectorAll('.seccion').forEach(seccion => {
+                seccion.classList.add('oculto');
+            });
+            
+            document.getElementById(seccionId).classList.remove('oculto');
+            
+            const elementos = document.querySelectorAll(`#${seccionId} .animar-entrada`);
+            elementos.forEach(el => {
+                el.style.animation = 'none';
+                setTimeout(() => {
+                    el.style.animation = 'fadeInUp 0.8s ease';
+                }, 10);
+            });
+        }
+
+        // Countdown
+        function actualizarCountdown() {
+            const fechaFiesta = new Date('April 12, 2026 12:30:00').getTime();
+            const ahora = new Date().getTime();
+            const diferencia = fechaFiesta - ahora;
+
+            const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+            const horas = Math.floor((diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
+            const segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
+
+            document.getElementById('dias').textContent = dias.toString().padStart(2, '0');
+            document.getElementById('horas').textContent = horas.toString().padStart(2, '0');
+            document.getElementById('minutos').textContent = minutos.toString().padStart(2, '0');
+            document.getElementById('segundos').textContent = segundos.toString().padStart(2, '0');
+        }
+
+        // Control de música
+        let cancionActual = 0;
+        const canciones = [
+            { id: 'musica1', nombre: 'loba.MP3' },
+            { id: 'musica2', nombre: 'corazon.MP3' },
+            { id: 'musica3', nombre: 'caballo.MP3' }
+        ];
+        
+        let musicaReproduciendose = false;
+        
+        function controlarMusica() {
+            canciones.forEach(cancion => {
+                const audio = document.getElementById(cancion.id);
+                audio.pause();
+                audio.currentTime = 0;
+            });
+            
+            cancionActual = (cancionActual + 1) % canciones.length;
+            
+            const musica = document.getElementById(canciones[cancionActual].id);
+            const btnMusica = document.getElementById('btn-musica');
+            const textoMusica = document.getElementById('texto-musica');
+            
+            musica.play().then(() => {
+                btnMusica.innerHTML = `<i class="fas fa-volume-up"></i>`;
+                btnMusica.style.background = 'linear-gradient(135deg, #c5a059, #a8884a)';
+                musicaReproduciendose = true;
+                textoMusica.style.opacity = '0.6';
+                textoMusica.style.animation = 'none';
+            }).catch(error => {
+                console.log('Error al reproducir música:', error);
+                setTimeout(() => {
+                    cancionActual = (cancionActual + 1) % canciones.length;
+                    controlarMusica();
+                }, 100);
+            });
+        }
+
+        // Modal
+        function abrirModal(src) {
+            document.getElementById('img-modal').src = src;
+            document.getElementById('modal').classList.add('mostrar');
+        }
+
+        function cerrarModal() {
+            document.getElementById('modal').classList.remove('mostrar');
+        }
+
+        // Copiar alias
+        function copiarAlias() {
+            const alias = 'mili.flor2010';
+            
+            if (navigator.clipboard && window.isSecureContext) {
+                navigator.clipboard.writeText(alias).then(() => {
+                    mostrarNotificacion();
+                }).catch(() => copiarFallback(alias));
+            } else {
+                copiarFallback(alias);
+            }
+        }
+
+        function copiarFallback(alias) {
+            const textArea = document.createElement('textarea');
+            textArea.value = alias;
+            textArea.style.position = 'fixed';
+            textArea.style.left = '-999999px';
+            document.body.appendChild(textArea);
+            textArea.select();
+            
+            try {
+                document.execCommand('copy');
+                mostrarNotificacion();
+            } catch (err) {
+                alert('No se pudo copiar el alias: ' + alias);
+            }
+            
+            document.body.removeChild(textArea);
+        }
+
+        function mostrarNotificacion() {
+            const notificacion = document.getElementById('notificacion');
+            notificacion.classList.add('mostrar');
+            setTimeout(() => {
+                notificacion.classList.remove('mostrar');
+            }, 3000);
+        }
+
+        // Cerrar modal
+        document.getElementById('modal').addEventListener('click', function(e) {
+            if (e.target === this) cerrarModal();
+        });
+
+        // Inicializar
+        document.addEventListener('DOMContentLoaded', function() {
+            setInterval(actualizarCountdown, 1000);
+            actualizarCountdown();
+        });
+    </script>
+</body>
+</html>
